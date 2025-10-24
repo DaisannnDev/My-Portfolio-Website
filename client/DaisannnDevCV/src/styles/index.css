@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --brand-background: radial-gradient(circle at 15% 20%, rgba(244, 63, 94, 0.25), transparent 55%),
+    radial-gradient(circle at 80% 15%, rgba(56, 189, 248, 0.22), transparent 55%),
+    linear-gradient(180deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-black text-brand-foreground antialiased;
+  background: var(--brand-background);
+  font-family: "JetBrains Mono", "Fira Code", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-6;
+}
+
+.page-shell {
+  @apply relative z-10 min-h-[calc(100dvh-8rem)];
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-brand-accent via-rose-500 to-brand-blue px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white shadow-[0_18px_40px_-22px_rgba(244,63,94,0.6)] transition-transform transition-shadow duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_-24px_rgba(56,189,248,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-3 rounded-full bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-brand-muted transition hover:text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue/60;
+}
+
+.form-input {
+  @apply mt-2 w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-brand-foreground outline-none transition focus:border-brand-accent/60 focus:ring-2 focus:ring-brand-blue/20 focus:ring-offset-0;
+}
+
+.card-shell {
+  @apply relative rounded-3xl bg-white/[0.04] px-6 py-8 shadow-[0_20px_40px_-24px] shadow-black/70 backdrop-blur transition;
+}
+
+.aurora-border {
+  background: linear-gradient(120deg, rgba(244, 63, 94, 0.45), rgba(56, 189, 248, 0.45));
+  border-radius: 24px;
+  padding: 1px;
+}
+
+.section-shell {
+  @apply relative mx-auto w-full max-w-6xl px-6 py-20;
+}
+
+.glow-text {
+  text-shadow: 0 8px 32px rgba(255, 77, 45, 0.45);
+}
+
+.glow {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(255, 77, 45, 0.35), transparent 60%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
