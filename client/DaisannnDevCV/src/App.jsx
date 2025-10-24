@@ -9,6 +9,7 @@ import Experience from "./pages/Experience";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
+import React from "react";
 
 const pageVariants = {
   initial: { opacity: 0, y: 24 },
